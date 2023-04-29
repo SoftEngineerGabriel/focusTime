@@ -1,73 +1,81 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-:root{
-    font-size: 62.5%;
+:root {
+  --bg-color: #121214;
 
-    --base-color: 100;
-    --bg-primaryc-controls: hsla(var(--base-color), 100%, 63%, 0.13);
-    --primary-color: hsl(var(--base-color), 100%, 63%) ;
-    --bg-body:rgba(18, 18, 20, 1);
-    --tx-color: rgba(255, 255, 255, 1);
+  --base-color: 194;
+  --bg-primary-light: hsla(var(--base-color), 100%, 63%, 0.13);
+  --primary-color: hsl(var(--base-color), 100%, 63%);
+
+  --text-color: #FFFFFF;
+
+  font-size: 62.5%;
 }
 
-body{
-    font-family: 'Roboto', sans-serif;
-    color: var(--tx-color);
-    background: var(--bg-body);
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
 
-    display: grid;
-    min-height: 100vh;
-    
-}
-main{
-    justify-self: center;
-    align-self: end;
-}
-button{
-    background-color: transparent;
-    border: none;
+  font-family: 'Roboto', sans-serif;
 
-    cursor: pointer;
+  display: grid;
+  min-height: 100vh;
 }
 
-button svg{
-    width: clamp(3.2rem, 2rem + 12vw, 6.4rem);
+button {
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
 }
-.hide{
-    display: none;
+
+.hide {
+  display: none;
 }
 
 .play svg path,
 .pause svg path,
-.sound-on svg path{
-    fill: var(--primary-color);
+.sound-on svg path {
+  fill: var(--primary-color);
 }
 
-#controls{
-    background-color: var(--bg-primaryc-controls);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3.2rem;
-    border-radius: 9999px;
-
-    width: clamp(10rem, 10rem + 30vw, 22.8rem);
-    /*clamp(min, preferred, max)*/
-    height: clamp(8rem, 5rem + 10vw, 10.8rem);
-
-}
-#timer{
-    font-size: clamp(4rem, 4rem + 10vw, 8.8rem);
-    display: flex;
+button svg {
+  width: clamp(3.2rem, 2rem + 12vw, 6.4rem);
 }
 
-footer{
-    justify-self: end;
-    align-self: end;
+main {
+  align-self: end;
+  justify-self: center;
+}
 
-    padding: 0 4rem 3.2rem 0;
+#timer {
+  font-size: clamp(4rem, 4rem + 10vw, 8.8rem);
+
+  display: flex;
+  margin-bottom: 1.6rem;
+}
+
+#controls {
+  background-color: var(--bg-primary-light);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
+
+  border-radius: 9999px;
+
+  width: clamp(10rem, 10rem + 30vw, 22.8rem);
+  height: clamp(8rem, 5rem + 10vw, 10.8rem)
+}
+
+footer {
+  align-self: end;
+  justify-self: end;
+
+  padding: 0 4rem 3.2rem 0;
 }
