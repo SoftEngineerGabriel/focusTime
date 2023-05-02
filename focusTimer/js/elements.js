@@ -7,13 +7,13 @@ const buttonSoundOff = document.querySelector('.sound-off')
 const minutesDisplay = document.querySelector('.minutes')
 const secondsDisplay = document.querySelector('.seconds')
 
-export const elements ={
-    buttonPlay,
-    buttonPause,
-    buttonStop,
-    buttonSet,
-    buttonSoundOff,
-    buttonSoundOn,
-    minutesDisplay,
-    secondsDisplay 
+export {
+  buttonPlay,
+  buttonPause,
+  buttonSet,
+  buttonStop,
+  buttonSoundOff,
+  buttonSoundOn,
+  minutesDisplay,
+  secondsDisplay
 }

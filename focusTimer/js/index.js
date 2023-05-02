@@ -1,18 +1,16 @@
 import Controls from "./controls.js"
 import Timer from "./timer.js"
-import { elements } from "./elements.js"
 import Sound from "./sounds.js"
-
-const {
-    buttonPlay,
-    buttonPause,
-    buttonStop,
-    buttonSet,
-    buttonSoundOff,
-    buttonSoundOn,
-    minutesDisplay,
-    secondsDisplay
-} = elements
+import {
+  buttonPause,
+  buttonPlay,
+  buttonSet,
+  buttonSoundOff,
+  buttonSoundOn,
+  buttonStop,
+  minutesDisplay,
+  secondsDisplay,
+} from "./elements.js"
 
 const controls = Controls({
   buttonPause,
@@ -27,7 +25,8 @@ const timer = Timer({
   resetControls: controls.reset
 })
 
-const sound = Sound()
+const sound = Sound()
+
 
 buttonPlay.addEventListener('click', function() {
   controls.play()

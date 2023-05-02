@@ -1,9 +1,10 @@
-import Sounds from "./sounds"
+import Sounds from "./sounds.js"
 
 export default function Timer({ 
   minutesDisplay, 
   secondsDisplay, 
-  resetControls
+  resetControls,
+  sound
 }) {
 
   let timerTimeOut
@@ -33,9 +34,10 @@ export default function Timer({
       if (isFinished) {
         resetControls()
         updateDisplay()
-        Sounds().timerEnd()
+        Sounds().timeEnd()
         return
       }
+
 
       if( seconds <= 0 ) {
         seconds = 60
